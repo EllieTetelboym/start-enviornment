@@ -10,7 +10,7 @@ const Sequelize = require('sequelize')
 // const dbName = process.env.NODE_ENV === 'test' ? `${pkg.name}-test` : pkg.name
 // console.log(`Opening database connection to ${dbName}`)
 
-const db = new Sequelize(`postgres://localhost:5432/muppets`, {
+const db = new Sequelize(`postgres://localhost:5432/AnimeFigures`, {
     logging: false,
 })
 

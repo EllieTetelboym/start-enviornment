@@ -7,7 +7,12 @@ const Character = db.define('character', {
         allowNull: false,
         unique: true
     },
-    animal:{
+    price:{
+        type: Sequelize.DECIMAL,
+        allowNull: false,
+        unique: false
+    },
+    description:{
         type: Sequelize.STRING,
         allowNull: false,
         unique: false
