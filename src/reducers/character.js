@@ -1,20 +1,18 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 import axios from "axios";
 
-const initState = [];
-
 export const fetchCharacters = createAsyncThunk('allCharacters', async ()=>{
     try {
-        const {data} = await axios.get('/api/characters');
+        const {data} = await axios.get('/api/Character');
         return data;
     } catch (err){
         console.log(err)
     }
 })
 
-const characterSlice = createSlice({
+export const characterSlice = createSlice({
     name: 'characters',
-    initState,
+    initialState: {},
     reducers:{},
     extraReducers:(builder)=>{
         builder.addCase(fetchCharacters.fulfilled, (state, action)=>{
